@@ -1,5 +1,4 @@
 /* === Reset === */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +9,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
@@ -20,7 +19,32 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+/* === Дизајн променливи (dark blue тема) === */
+:root {
+  /* Позадина (од најтемна до посветла навy) */
+  --color-darkest: #09080E;
+  --color-dark: #01082A;
+  --color-mid: #00257A;
+  --color-light: #00297E;
+
+  /* Текст */
+  --color-text: #F7FDFD;
+  --color-text-muted: #9fb3d1;
+
+  /* Акцент и borders */
+  --color-accent: #006DFF;
+  --color-accent-hover: #2b86ff;
+  --color-silver: #F7FDFD;
+
+  --max-width: 1100px;
+}
+
+/* === Основа === */
+body {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #09080E 0%, #01082A 55%, #00257A 100%);
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-geist-sans, system-ui), -apple-system, sans-serif;
+  line-height: 1.6;
 }
