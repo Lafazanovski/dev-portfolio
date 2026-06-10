@@ -2,10 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(9, 8, 14, 0.6);
+  background: var(--navbar-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 109, 255, 0.25);
+  border-bottom: 1px solid var(--navbar-border);
 }
 
 .navbar-container {
@@ -22,10 +22,9 @@
 
 .navbar-logo {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.5px;
   color: var(--color-text);
-  text-shadow: 0 0 60px var(--color-text);
   transition: color 0.2s ease;
 }
 
@@ -61,12 +60,40 @@
   gap: 1rem;
 }
 
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  transition: color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--color-accent);
+}
+
+.theme-icon-light {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-dark {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-light {
+  display: block;
+}
+
 .navbar-cta {
   padding: 0.55rem 1.25rem;
   border-radius: 8px;
   font-weight: 600;
-  color: var(--color-text);
-  background-color: inherit;
+  color: #fff;
+  background-color: var(--color-accent);
   border: 1px solid var(--color-accent);
   box-shadow: 0 0 14px rgba(0, 109, 255, 0.4);
   transition: all 0.25s ease;
@@ -74,7 +101,6 @@
 
 .navbar-cta:hover {
   background-color: var(--color-accent-hover);
-  color: #fff;
   box-shadow: 0 0 22px rgba(0, 109, 255, 0.65);
   transform: translateY(-2px);
 }
@@ -113,10 +139,10 @@
     align-items: center;
     gap: 1.5rem;
     padding: 2rem 1.5rem;
-    background: rgba(9, 8, 14, 0.97);
+    background: var(--navbar-menu-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 109, 255, 0.25);
+    border-bottom: 1px solid var(--navbar-border);
 
     transform: translateY(-150%);
     opacity: 0;
@@ -135,7 +161,7 @@
     width: 100%;
     margin-top: 0.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(0, 109, 255, 0.2);
+    border-top: 1px solid var(--navbar-border);
     text-align: center;
   }
 }

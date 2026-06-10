@@ -13,9 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kristijan Lafazanovski | Web Developer",
-  description: "Kristijan's portfolio, Front-End Web Developer.",
+  title: "Kristijan Lafazanovski | Frontend Developer",
+  description:
+    "Portfolio of Kristijan Lafazanovski — frontend developer building modern, fast web and mobile applications.",
 };
+
+const themeScript = `
+  (function() {
+    try {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+`;
 
 export default function RootLayout({
   children,
@@ -23,8 +33,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
+      <body suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {children}
+      </body>
     </html>
   );
 }

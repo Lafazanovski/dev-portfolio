@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -9,12 +9,20 @@ export default function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
+  const toggleTheme = () => {
+    const current =
+      document.documentElement.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
           <a href="#home" className="navbar-logo" onClick={closeMenu}>
-            <i>  K L  </i>
+            <i> K.L. </i>
           </a>
         </div>
 
@@ -44,6 +52,7 @@ export default function Navbar() {
               Contact
             </a>
           </li>
+
           <li className="navbar-menu-cta">
             <a href="#contact" className="navbar-cta" onClick={closeMenu}>
               Hire me
@@ -52,9 +61,19 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar-actions">
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            <FiMoon className="theme-icon theme-icon-dark" />
+            <FiSun className="theme-icon theme-icon-light" />
+          </button>
+
           <a href="#contact" className="navbar-cta" onClick={closeMenu}>
             Hire me
           </a>
+
           <button
             className="navbar-toggle"
             onClick={() => setIsOpen(!isOpen)}
