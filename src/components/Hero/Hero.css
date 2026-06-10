@@ -56,7 +56,6 @@
   transition: all 0.25s ease;
 }
 
-/* Главно копче — пополнето сино со сјај */
 .btn-primary {
   background-color: var(--color-accent);
   color: #fff;
@@ -70,7 +69,6 @@
   transform: translateY(-2px);
 }
 
-/* Споредно копче — сребрен/светол border со сјај */
 .btn-secondary {
   background-color: transparent;
   color: var(--color-text);
