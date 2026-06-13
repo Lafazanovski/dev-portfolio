@@ -31,6 +31,7 @@ a {
   --bg-gradient: linear-gradient(160deg, #09080E 0%, #01082A 55%, #00257A 100%);
   --surface: rgba(0, 37, 122, 0.18);
   --border-color: rgba(0, 109, 255, 0.25);
+  --card-bg: rgba(0, 0, 0, 0.2);
 
   --navbar-bg: rgba(9, 8, 14, 0.85);
   --navbar-menu-bg: rgba(9, 8, 14, 0.97);
@@ -50,6 +51,7 @@ a {
   --bg-gradient: linear-gradient(160deg, #8fbcf7  0%, #e6f2ff 50%, #fff 100%);
   --surface: rgba(0, 37, 122, 0.06);
   --border-color: rgba(0, 109, 255, 0.3);
+  --card-bg: rgba(255, 255, 255, 0.5);
 
   --navbar-bg: rgba(247, 253, 253, 0.85);
   --navbar-menu-bg: rgba(247, 253, 253, 0.97);
