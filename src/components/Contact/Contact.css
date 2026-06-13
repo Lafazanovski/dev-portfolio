@@ -1,0 +1,140 @@
+.contact-content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-text {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.contact-details li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.contact-details a {
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.contact-details a:hover {
+  color: var(--color-accent);
+}
+
+.contact-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  color: var(--color-text);
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  transition: all 0.25s ease;
+}
+
+.contact-socials a:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(0, 109, 255, 0.3);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(0, 109, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.contact-submit:hover {
+  background-color: var(--color-accent-hover);
+  box-shadow: 0 0 22px rgba(0, 109, 255, 0.65);
+  transform: translateY(-2px);
+}
+
+.form-message {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.form-success {
+  color: #22c55e;
+}
+
+.form-error {
+  color: #ef4444;
+}
+
+/* === Мобилен === */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
