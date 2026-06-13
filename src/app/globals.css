@@ -8,6 +8,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  scrollbar-width: auto;
+  scrollbar-color: #00257a #09080e;
 }
 
 img {
@@ -22,13 +24,13 @@ a {
 
 /* === DARK тема (default) === */
 :root {
-  --color-text: #F7FDFD;
+  --color-text: #f7fdfd;
   --color-text-muted: #9fb3d1;
-  --color-accent: #006DFF;
+  --color-accent: #006dff;
   --color-accent-hover: #2b86ff;
-  --color-silver: #F7FDFD;
+  --color-silver: #f7fdfd;
 
-  --bg-gradient: linear-gradient(160deg, #09080E 0%, #01082A 55%, #00257A 100%);
+  --bg-gradient: linear-gradient(160deg, #09080e 0%, #01082a 55%, #00257a 100%);
   --surface: rgba(0, 37, 122, 0.18);
   --border-color: rgba(0, 109, 255, 0.25);
   --card-bg: rgba(0, 0, 0, 0.2);
@@ -42,13 +44,13 @@ a {
 
 /* === LIGHT тема === */
 [data-theme="light"] {
-  --color-text: #01082A;
+  --color-text: #01082a;
   --color-text-muted: #3a5a8a;
-  --color-accent: #006DFF;
+  --color-accent: #006dff;
   --color-accent-hover: #0052cc;
-  --color-silver: #00257A;
+  --color-silver: #00257a;
 
-  --bg-gradient: linear-gradient(160deg, #8fbcf7  0%, #e6f2ff 50%, #fff 100%);
+  --bg-gradient: linear-gradient(160deg, #8fbcf7 0%, #e6f2ff 50%, #fff 100%);
   --surface: rgba(0, 37, 122, 0.06);
   --border-color: rgba(0, 109, 255, 0.3);
   --card-bg: rgba(255, 255, 255, 0.5);
@@ -62,7 +64,10 @@ a {
 body {
   min-height: 100vh;
   color: var(--color-text);
-  font-family: var(--font-geist-sans, system-ui), -apple-system, sans-serif;
+  font-family:
+    var(--font-geist-sans, system-ui),
+    -apple-system,
+    sans-serif;
   line-height: 1.6;
   transition: color 0.3s ease;
 }
@@ -91,4 +96,23 @@ body::before {
 
 .section-title span {
   color: var(--color-accent);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09080E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00257A;
+  border: 2px solid #09080E;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00297E;
 }
