@@ -14,14 +14,15 @@
 .hero-greeting {
   color: var(--color-accent);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 0.75rem;
 }
 
 .hero-name {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 700;
+  font-weight: 500;
+  text-shadow: 0 0 18px rgba(0, 109, 255, 0.45);;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
