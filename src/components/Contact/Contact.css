@@ -137,4 +137,12 @@
     flex-direction: column;
     gap: 2.5rem;
   }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-socials  {
+    justify-content: center;
+  }
 }

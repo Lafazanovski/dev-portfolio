@@ -55,7 +55,7 @@ export default function Navbar() {
 
           <li className="navbar-menu-cta">
             <a href="#contact" className="navbar-cta" onClick={closeMenu}>
-              Hire me
+              {"Let's Talk"}
             </a>
           </li>
         </ul>
@@ -71,7 +71,7 @@ export default function Navbar() {
           </button>
 
           <a href="#contact" className="navbar-cta" onClick={closeMenu}>
-            Hire me
+            {"Let's Talk"}
           </a>
 
           <button
