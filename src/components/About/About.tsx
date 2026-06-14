@@ -10,7 +10,7 @@ export default function About() {
       <div className="about-content">
         <div className="about-text">
           <p>
-            I аm a frontend developer based in Macedonia, recently graduated 
+            I аm a frontend developer based in Skopje, Macedonia, recently graduated 
              Front-End Programming Academy. I specialize in building
             modern, responsive, and high-performance web and mobile applications
             using React, Next.js, and TypeScript.

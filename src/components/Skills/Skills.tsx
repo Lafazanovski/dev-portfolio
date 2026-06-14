@@ -28,7 +28,7 @@ export default function Skills() {
   return (
     <section id="skills" className="section skills">
       <h2 className="section-title">
-        My <span>Skills</span>
+       <span>My</span> Skills
       </h2>
 
       <div className="skills-grid">

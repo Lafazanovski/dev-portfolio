@@ -14,7 +14,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section projects">
       <h2 className="section-title">
-        My <span>Projects</span>
+         Projects
       </h2>
 
       <div className="projects-grid">
